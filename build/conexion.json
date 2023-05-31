@@ -1,0 +1,5 @@
+{
+    "url":"http://localhost:7000/controlador.php",
+    "urlImg":"http://localhost:7000/imagen.php",
+    "urlServImg":"http://localhost:7000"
+}
