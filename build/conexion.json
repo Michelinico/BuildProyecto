@@ -1,5 +1,5 @@
 {
-    "url":"http://localhost:80/index.php",
-    "urlImg":"http://localhost:80/imagen.php",
-    "urlServImg":"s3://prueba-bucket-parking/"
+    "url":"http://localhost:7000/controlador.php",
+    "urlImg":"http://localhost:7000/imagen.php",
+    "urlServImg":"http://localhost:7000"
 }
