@@ -21,7 +21,7 @@ switch ($accion) {
             $exito = false;
         }
         $respuesta = array("respuesta" => $exito,   
-                            "usuario" => $usuario['DNI'], 
+                            "usuario" => $datosUsuario['DNI'], 
                             "tipo" => $datosUsuario['tipo'],
                             "nombre" => $datosUsuario['nombre']
         );
