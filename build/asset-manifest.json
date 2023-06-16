@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.79dab1eb.css",
+    "main.js": "/static/js/main.c6d771b3.js",
+    "static/js/787.319676fc.chunk.js": "/static/js/787.319676fc.chunk.js",
+    "static/media/FondoC.jpeg": "/static/media/FondoC.283c1c1dd6a03b9bc012.jpeg",
+    "index.html": "/index.html",
+    "main.79dab1eb.css.map": "/static/css/main.79dab1eb.css.map",
+    "main.c6d771b3.js.map": "/static/js/main.c6d771b3.js.map",
+    "787.319676fc.chunk.js.map": "/static/js/787.319676fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79dab1eb.css",
+    "static/js/main.c6d771b3.js"
+  ]
+}
