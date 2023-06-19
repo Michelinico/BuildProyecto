@@ -281,12 +281,18 @@ class ParkingDB {
             $respuesta=$this->conexion->query($sql);
             $fila = $respuesta->fetch_assoc();
             $valor = $fila['Salida'];
-            if ($valor!=NULL || $valor==""){
+            if ($respuesta->num_rows > 0) {
+                if ($valor!=NULL){
+                    $sql="INSERT INTO `entrada-salidas`(`IDE-S`,Matricula,Entrada,Salida) VALUES (DEFAULT,'$matricula',CURRENT_TIMESTAMP,DEFAULT)";
+                    $respuesta=$this->conexion->query($sql);
+                    $exito = "ADELANTE";
+                }else {
+                    $exito = "DENTRO";
+                }
+            }else{
                 $sql="INSERT INTO `entrada-salidas`(`IDE-S`,Matricula,Entrada,Salida) VALUES (DEFAULT,'$matricula',CURRENT_TIMESTAMP,DEFAULT)";
                 $respuesta=$this->conexion->query($sql);
                 $exito = "ADELANTE";
-            }else {
-                $exito = "DENTRO";
             }
         }else{
             $exito = "NODB";
