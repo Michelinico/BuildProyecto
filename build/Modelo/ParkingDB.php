@@ -304,7 +304,10 @@ class ParkingDB {
             $fila = $respuesta->fetch_assoc();
             $valor = $fila['Salida'];
             if ($valor==NULL){
-                $sql="UPDATE `entrada-salidas` SET `Salida`=CURRENT_TIMESTAMP WHERE `IDE-S`=(SELECT `IDE-S` FROM `entrada-salidas` WHERE Matricula='$Matricula' ORDER BY `IDE-S` DESC LIMIT 1;)";
+                $sql="UPDATE `entrada-salidas` AS es
+                    JOIN (SELECT `IDE-S` FROM `entrada-salidas` WHERE Matricula='1025DRT' ORDER BY `IDE-S` DESC LIMIT 1) AS sub
+                    SET es.`Salida` = CURRENT_TIMESTAMP
+                    WHERE es.`IDE-S` = sub.`IDE-S`;";
                 $respuesta=$this->conexion->query($sql);
                 $exito = "ADELANTE";
             }else {
