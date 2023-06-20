@@ -311,7 +311,7 @@ class ParkingDB {
             $valor = $fila['Salida'];
             if ($valor==NULL){
                 $sql="UPDATE `entrada-salidas` AS es
-                    JOIN (SELECT `IDE-S` FROM `entrada-salidas` WHERE Matricula='1025DRT' ORDER BY `IDE-S` DESC LIMIT 1) AS sub
+                    JOIN (SELECT `IDE-S` FROM `entrada-salidas` WHERE Matricula='$matricula' ORDER BY `IDE-S` DESC LIMIT 1) AS sub
                     SET es.`Salida` = CURRENT_TIMESTAMP
                     WHERE es.`IDE-S` = sub.`IDE-S`;";
                 $respuesta=$this->conexion->query($sql);
